@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilal Maisoor | Business Automater, Marketer & Tech enthusiast</title>
+  <!-- Import Tailwind for utility-first styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper.js for the Instagram reels carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Fallback styles in case external CSS fails to load. Ensures white text on dark background by default. -->
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #1a1a2e, #0f0d1d);
+      color: #ffffff;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+    <!-- Decorative images behind the hero text -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+      <!-- Automation / workflow image: fills left portion of hero background -->
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=80" alt="Automation workflow" class="absolute top-0 left-0 w-[80vw] md:w-[60vw] h-[90vh] md:h-[80vh] object-cover rotate-[-6deg] opacity-25 md:opacity-30 blur-md rounded-2xl border border-white/10">
+      <!-- Marketing analytics image: fills right portion of hero background -->
+      <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1600&q=80" alt="Marketing analytics" class="absolute top-[10vh] right-0 w-[70vw] md:w-[60vw] h-[80vh] object-cover rotate-3 opacity-25 md:opacity-30 blur-md rounded-2xl border border-white/10">
+      <!-- Tech / coding image: fills lower middle portion of hero background -->
+      <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80" alt="Tech coding screen" class="absolute bottom-[-10vh] left-[20vw] w-[80vw] md:w-[60vw] h-[80vh] object-cover -rotate-2 opacity-25 md:opacity-30 blur-md rounded-2xl border border-white/10">
+    </div>
+    <h1 class="text-4xl md:text-6xl font-bold tracking-tight">Bilal Maisoor</h1>
+    <!-- Updated description to reflect business automater, marketing, and tech interests -->
+    <p class="mt-4 text-lg md:text-xl text-gray-300">Business Automater | marketer | Tech enthusiast</p>
+    <a href="#booking" class="mt-8 px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl shadow-lg transition">Book a Consultation</a>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 px-6 md:px-16" id="about">
+    <h2 class="text-3xl font-semibold text-center mb-8">About Me</h2>
+    <div class="flex flex-col items-center md:flex-row md:items-start gap-8 max-w-4xl mx-auto">
+      <!-- Profile image added here -->
+      <img src="bilal.jpg" alt="Professional portrait" class="w-48 h-48 rounded-full object-cover border-4 border-purple-600 shadow-lg">
+      <p class="text-center md:text-left max-w-xl text-gray-300 leading-relaxed">
+        I'm a business developer at heart, with a passion for technology and building businesses that shape the future. From strategy to execution, I bridge the gap between business needs and technical possibilities.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16 px-6 md:px-16 bg-gray-800" id="services">
+    <h2 class="text-3xl font-semibold text-center mb-12">What I Do</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-3">Business Development</h3>
+        <p class="text-gray-400">Helping businesses grow through partnerships, strategies, and market insights.</p>
+      </div>
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-3">Tech Automater</h3>
+        <p class="text-gray-400">Leveraging modern technologies to build sleek automations that makes everyday buisness tasks easy.</p>
+      </div>
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-3">Marketing</h3>
+        <p class="text-gray-400">One-on-one consultations to work with business owners to help them voice their brand and purpose better</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IG Reels Carousel -->
+  <section class="py-16 px-6 md:px-16" id="reels">
+    <h2 class="text-3xl font-semibold text-center mb-12">My IG Reels</h2>
+    <div class="swiper max-w-4xl mx-auto">
+      <div class="swiper-wrapper">
+        <!-- Replace iframe src with actual Instagram reel embeds -->
+        <div class="swiper-slide flex justify-center">
+          <iframe src="https://www.instagram.com/reel/xyz/embed" class="w-[300px] h-[540px] rounded-xl" loading="lazy"></iframe>
+        </div>
+        <div class="swiper-slide flex justify-center">
+          <iframe src="https://www.instagram.com/reel/abc/embed" class="w-[300px] h-[540px] rounded-xl" loading="lazy"></iframe>
+        </div>
+        <div class="swiper-slide flex justify-center">
+          <iframe src="https://www.instagram.com/reel/123/embed" class="w-[300px] h-[540px] rounded-xl" loading="lazy"></iframe>
+        </div>
+      </div>
+      <!-- Pagination + Navigation -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="py-16 px-6 md:px-16 bg-gray-800" id="blog">
+    <h2 class="text-3xl font-semibold text-center mb-12">Latest Articles</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Inbound marketing blog card -->
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-105 transition">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">🚀</span>
+          <h3 class="text-xl font-bold">The Ultimate Guide to Inbound Marketing</h3>
+        </div>
+        <p class="text-gray-400 mb-4">Inbound attracts strangers with value‑first content, converting visitors into leads and nurturing them into customers—no pushy ads required.</p>
+        <a href="ultimate-guide-to-inbound-marketing.html" class="text-purple-400 hover:underline">Read More →</a>
+      </div>
+      <!-- Blog writing and SEO card -->
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-105 transition">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">📝</span>
+          <h3 class="text-xl font-bold">How to Write and Optimize a Blog for Results</h3>
+        </div>
+        <p class="text-gray-400 mb-4">A practical workflow for topic selection, drafting value‑first posts, and SEO + CTA optimization that turns traffic into pipeline.</p>
+        <a href="write-and-optimize-a-blog-for-results.html" class="text-purple-400 hover:underline">Read More →</a>
+      </div>
+      <!-- Blog structure / conversion card -->
+      <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-105 transition">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">📈</span>
+          <h3 class="text-xl font-bold">Blog Structure That Converts</h3>
+        </div>
+        <p class="text-gray-400 mb-4">Why structure matters: hook → value → proof → CTA. Use this repeatable layout to guide readers from curiosity to action.</p>
+        <a href="blog-structure-that-converts.html" class="text-purple-400 hover:underline">Read More →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Offer Section -->
+  <section class="py-16 px-6 md:px-16 bg-gray-900" id="services-offer">
+    <h2 class="text-3xl font-semibold text-center mb-12">How I Can Help You</h2>
+    <div class="max-w-4xl mx-auto p-8 bg-gray-800 bg-opacity-70 rounded-2xl shadow-xl">
+      <p class="text-gray-300 mb-4 text-center">I take a comprehensive look at your business and craft solutions that align with your goals:</p>
+      <ul class="list-disc list-inside text-gray-400 space-y-2">
+        <li><strong>Marketing consultation:</strong> refine your messaging, funnels, and positioning to attract and convert your ideal customers.</li>
+        <li><strong>Competitive market research & competitor analysis:</strong> understand who’s winning, why, and how to outrun them.</li>
+        <li><strong>Brand strategy:</strong> craft a practical roadmap to build your brand, content, and distribution channels.</li>
+        <li><strong>Business automations:</strong> identify and automate manual processes to increase outreach and distribution.</li>
+        <li><strong>Web development & creative direction:</strong> modern, mobile‑first builds and creative guidance to bring your vision to life.</li>
+      </ul>
+      <p class="text-gray-300 mt-4">Whether you need a growth strategy, process automation, a stunning website or creative guidance, I'm here to help.</p>
+      <div class="mt-6 text-center">
+        <a href="#booking" class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl shadow-lg transition">Let’s Collaborate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qualifications Section -->
+  <section class="py-16 px-6 md:px-16 bg-gray-800" id="qualifications">
+    <div class="flex flex-wrap items-center justify-center gap-6 max-w-6xl mx-auto">
+      <!-- Meta -->
+      <div class="w-16 h-16 rounded-2xl shadow-lg flex items-center justify-center bg-gradient-to-br from-sky-500 to-fuchsia-500">
+        <span class="text-2xl font-bold text-white">M</span>
+      </div>
+      <!-- IBM -->
+      <div class="w-16 h-16 rounded-2xl shadow-lg flex items-center justify-center bg-gradient-to-br from-blue-600 to-indigo-500">
+        <span class="text-lg font-bold text-white">IBM</span>
+      </div>
+      <!-- Google -->
+      <div class="w-16 h-16 rounded-2xl shadow-lg flex items-center justify-center bg-gradient-to-br from-yellow-400 to-red-500">
+        <span class="text-2xl font-bold text-white">G</span>
+      </div>
+      <!-- HubSpot -->
+      <div class="w-16 h-16 rounded-2xl shadow-lg flex items-center justify-center bg-gradient-to-br from-orange-400 to-rose-500">
+        <span class="text-2xl font-bold text-white">H</span>
+      </div>
+      <!-- LinkedIn -->
+      <div class="w-16 h-16 rounded-2xl shadow-lg flex items-center justify-center bg-gradient-to-br from-sky-400 to-blue-600">
+        <span class="text-xl font-bold text-white">in</span>
+      </div>
+      <!-- Oracle -->
+      <div class="w-16 h-16 rounded-2xl shadow-lg flex items-center justify-center bg-gradient-to-br from-red-500 to-rose-600">
+        <span class="text-2xl font-bold text-white">O</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="py-16 px-6 md:px-16" id="booking">
+    <h2 class="text-3xl font-semibold text-center mb-8">Book a Consultation</h2>
+    <p class="text-center text-gray-300 mb-6">Pick a time that works for you below.</p>
+    <!-- Calendly booking embed. Use the user-provided Calendly link so people can schedule directly. -->
+    <div class="max-w-3xl mx-auto">
+      <!-- The embed_type parameter ensures an inline widget and embed_domain can be set to your domain or localhost during development. -->
+      <iframe src="https://calendly.com/bilalmaisoor24/30min?embed_domain=localhost&embed_type=Inline" class="w-full h-[630px] rounded-2xl border-0 shadow-lg"></iframe>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <footer class="py-12 text-center text-gray-400 bg-gray-900">
+    <p>© 2025 Bilal Maisoor. All rights reserved.</p>
+    <div class="flex justify-center gap-6 mt-4">
+      <a href="mailto:your@email.com" class="hover:text-purple-400">Email</a>
+      <a href="https://www.linkedin.com" class="hover:text-purple-400">LinkedIn</a>
+      <a href="https://twitter.com" class="hover:text-purple-400">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- Initialize Swiper carousel -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      slidesPerView: 1,
+      spaceBetween: 20,
+    });
+  </script>
+</body>
+</html>
