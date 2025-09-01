@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Projects – Bilal Maisoor</title>
+
+  <!-- SEO basics -->
+  <meta name="description" content="Selected projects by Bilal Maisoor: growth, automation, and modern web builds."/>
+  <meta property="og:title" content="Projects – Bilal Maisoor"/>
+  <meta property="og:description" content="Selected projects by Bilal Maisoor."/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { color:#fff; font-family:sans-serif; }
+    .progress-bar{ position:fixed; top:0; left:0; height:3px; width:0%;
+      background:linear-gradient(90deg,#a78bfa,#e879f9,#22d3ee); z-index:60; }
+    :root{ --hue:255; }
+    .scroll-gradient{
+      background: linear-gradient(
+        to bottom right,
+        hsl(var(--hue) 20% 12%),
+        hsl(calc(var(--hue) + 30) 20% 6%)
+      );
+      transition: background .1s linear;
+    }
+    .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal-in{ opacity:1; transform:translateY(0); }
+
+    .chip{border:1px solid rgba(255,255,255,.14)}
+    .chip-active{border-color: rgba(217,70,239,.6); color:#f0abfc; background:rgba(217,70,239,.08)}
+  </style>
+  <!-- WhatsApp Floating Button -->
+<style>
+  .wa-fab {
+    position: fixed; right: 16px; bottom: 16px; z-index: 60;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366; color: #fff; text-decoration: none;
+    border-radius: 9999px; padding: 12px 16px; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font: 600 14px/1.1 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Inter,"Helvetica Neue",Arial;
+    transition: transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+  }
+  .wa-fab:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.45); }
+  .wa-icon { width: 22px; height: 22px; display:block; }
+  /* Pulse */
+  .wa-fab::after {
+    content:""; position:absolute; inset:0; border-radius:9999px; pointer-events:none;
+    box-shadow: 0 0 0 0 rgba(37,211,102,.6); animation: wa-pulse 2.2s infinite;
+  }
+  @keyframes wa-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,.55); }
+    70%{ box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+  /* Compact on small screens */
+  @media (max-width: 420px) {
+    .wa-fab { padding: 12px; gap: 0 }
+    .wa-label { display: none }
+  }
+</style>
+
+<a
+  class="wa-fab"
+  href="https://wa.me/94769673932?text=Hey%20Bilal%2C%20I%27d%20love%20to%20chat%20about%20marketing%2Fautomation%20or%20web%20development."
+  target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"
+>
+  <!-- WhatsApp SVG icon (inline, no external asset needed) -->
+  <svg class="wa-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+    <path fill="#E9F9EE" d="M6.1 27.9 7.6 23a11.8 11.8 0 1 1 4.9 4.8l-4.9.1Z"/>
+    <path fill="#25D366" d="M6.2 28a.6.6 0 0 1-.6-.7l1.4-4.6A12.4 12.4 0 1 1 28 15.6 12.4 12.4 0 0 1 12.5 27.4l-6.3 1a.6.6 0 0 1 0 0Zm6.3-2a11.2 11.2 0 1 0-4.2-3.1.6.6 0 0 1 .1.5l-1 3.2 3.3-.5a.6.6 0 0 1 .5.1c.4.3.8.5 1.3.7Z"/>
+    <path fill="#25D366" d="M22.8 18.6c-.2 1.2-1.1 2.1-2.2 2.4-1 .3-2.3.2-3.9-.5-3.4-1.5-5.6-4.9-5.9-5.3-.3-.4-1.4-1.9-1.4-3.5 0-1.6.9-2.6 1.3-2.9.4-.4 1-.5 1.7-.5h.5c.5 0 .8.1 1 .8.4 1 .9 2.3 1 2.5.1.2.2.5 0 .8l-.5.8-.2.3c-.1.2-.3.4 0 .8.3.4 1.3 2 3.1 3.2 1.8 1.1 2.2 1 2.6.7l.6-.6c.3-.3.5-.3.8-.2l2.3 1c.6.2.9.4 1 .6 0 .1 0 .8-.1 1.1Z"/>
+  </svg>
+  <span class="wa-label">Text me directly</span>
+</a>
+
+</head>
+
+<body class="scroll-gradient bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
+  <!-- progress -->
+  <div class="progress-bar" id="progress"></div>
+
+  <!-- Top nav (same as index/blogs) -->
+  <header class="absolute top-0 left-0 w-full flex justify-end px-8 py-6 z-20">
+    <nav class="flex gap-8 text-sm font-medium">
+      <a href="blogs.html" class="text-gray-300 hover:text-white transition">Blogs</a>
+      <a href="projects.html" class="text-white">Projects</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative pt-28 pb-10 md:pt-32 md:pb-12 text-center px-6 overflow-hidden">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+      <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full blur-3xl opacity-20"
+           style="background: radial-gradient(closest-side, #e879f9, transparent)"></div>
+      <div class="absolute -bottom-24 -left-16 w-96 h-96 rounded-full blur-3xl opacity-20"
+           style="background: radial-gradient(closest-side, #22d3ee, transparent)"></div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Projects</h1>
+    <p class="mt-3 text-white/70 max-w-2xl mx-auto">
+      A selection of builds focused on growth, automation, and modern web.
+    </p>
+  </section>
+
+  <!-- Controls: search + tags -->
+  <section class="px-6">
+    <div class="max-w-6xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-4 md:p-6 reveal">
+      <div class="flex flex-col md:flex-row md:items-center gap-4">
+        <div class="flex-1">
+          <label class="sr-only" for="search">Search</label>
+          <input id="search" type="text" placeholder="Search projects…"
+            class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-fuchsia-400/50"/>
+        </div>
+        <div class="flex flex-wrap items-center gap-2" id="tags">
+          <button class="px-3 py-1.5 rounded-xl text-xs chip" data-tag="marketing">Marketing</button>
+          <button class="px-3 py-1.5 rounded-xl text-xs chip" data-tag="automation">Automation</button>
+          <button class="px-3 py-1.5 rounded-xl text-xs chip" data-tag="saas">SaaS</button>
+          <button class="px-3 py-1.5 rounded-xl text-xs chip" data-tag="web">Web</button>
+          <button class="px-3 py-1.5 rounded-xl text-xs chip" data-tag="founder">Founder</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects grid -->
+  <main class="px-6 py-10 md:py-12">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8" id="projects">
+
+      <!-- VEGATISE (Project 1) -->
+      <article class="proj p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-[1.01] transition reveal"
+               data-tags="marketing,saas,web,automation,founder">
+        <!-- If you add a cover image later, drop it in /assets and uncomment below -->
+        <!-- <img src="./assets/vegatise-cover.jpg" alt="Vegatise cover" class="w-full h-40 object-cover rounded-xl mb-4"> -->
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="title text-xl font-bold leading-snug">Vegatise</h2>
+          <span class="px-2 py-0.5 rounded chip text-xs">Founder</span>
+        </div>
+        <p class="desc text-gray-400 mt-2">
+          Ad-tech platform focused on performance marketing & distribution. I founded Vegatise and led the end-to-end product, growth, and partnerships.
+        </p>
+
+        <!-- quick facts -->
+        <ul class="mt-4 text-sm text-white/70 space-y-1">
+          <li>• Focus: performance marketing, growth automation</li>
+          <li>• Role: strategy, product, BD</li>
+          <li>• Stack: modern web, data-driven optimization</li>
+        </ul>
+
+        <!-- tags row -->
+        <div class="flex flex-wrap gap-2 mt-4 text-xs text-white/60">
+          <span class="px-2 py-0.5 rounded chip">Marketing</span>
+          <span class="px-2 py-0.5 rounded chip">Automation</span>
+          <span class="px-2 py-0.5 rounded chip">SaaS</span>
+          <span class="px-2 py-0.5 rounded chip">Web</span>
+        </div>
+
+        <!-- actions -->
+        <div class="mt-5 flex items-center gap-3">
+          <a href="https://www.vegatise.com/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 text-fuchsia-300 hover:text-fuchsia-200">
+            View live
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M14 3h7v7h-2V6.414l-9.293 9.293-1.414-1.414L17.586 5H14V3Z"></path>
+              <path d="M5 5h6v2H7v10h10v-4h2v6H5V5Z"></path>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 💡 Add future projects by duplicating this <article class="proj">,
+           updating title/desc/tags, and changing the live link. -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 text-center text-gray-400 bg-gray-900">
+    <p>© 2025 Bilal Maisoor. All rights reserved.</p>
+    <div class="flex justify-center gap-6 mt-4">
+      <a href="index.html" class="hover:text-purple-400">Home</a>
+      <a href="blogs.html" class="hover:text-purple-400">Blogs</a>
+    </div>
+  </footer>
+
+  <!-- Scripts (progress, hue, reveal, filters) -->
+  <script>
+    // progress + hue
+    const progress = document.getElementById('progress');
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const h = doc.scrollHeight - doc.clientHeight;
+      const p = h > 0 ? (doc.scrollTop / h) * 100 : 0;
+      progress.style.width = p + '%';
+      const hue = 255 + (p * 0.6);
+      document.documentElement.style.setProperty('--hue', hue.toFixed(1));
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal, .proj').forEach(el => io.observe(el));
+
+    // search + tag filters
+    const search = document.getElementById('search');
+    const projects = [...document.querySelectorAll('.proj')];
+    const tagsWrap = document.getElementById('tags');
+    let activeTags = new Set();
+
+    function applyFilter(){
+      const q = (search.value || '').trim().toLowerCase();
+      projects.forEach(card => {
+        const title = card.querySelector('.title').textContent.toLowerCase();
+        const desc  = card.querySelector('.desc').textContent.toLowerCase();
+        const tags  = (card.dataset.tags || '').split(',').map(t => t.trim());
+        const matchesText = !q || title.includes(q) || desc.includes(q);
+        const matchesTags = activeTags.size === 0 || [...activeTags].every(t => tags.includes(t));
+        card.style.display = (matchesText && matchesTags) ? '' : 'none';
+      });
+    }
+
+    if (search) search.addEventListener('input', applyFilter);
+
+    if (tagsWrap) {
+      tagsWrap.addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-tag]');
+        if(!btn) return;
+        const tag = btn.dataset.tag;
+        if(activeTags.has(tag)){
+          activeTags.delete(tag);
+          btn.classList.remove('chip-active');
+        } else {
+          activeTags.add(tag);
+          btn.classList.add('chip-active');
+        }
+        applyFilter();
+      });
+    }
+
+    // initial
+    applyFilter();
+  </script>
+</body>
+</html>

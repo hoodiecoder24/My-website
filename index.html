@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bilal Maisoor | Business Automater, Marketer & Tech enthusiast</title>
+  <title>Bilal Maisoor | Business Automater, Marketer & Tech Enthusiast</title>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,7 +14,6 @@
 
   <!-- Base styles + animation helpers -->
   <style>
-    /* Fallback body style if Tailwind fails */
     body { color:#fff; font-family:sans-serif; }
 
     /* Progress bar at top */
@@ -24,7 +23,6 @@
       z-index:60;
     }
 
-    /* Gradient hue shift (we tint Tailwind gradient using a CSS var) */
     :root{ --hue:255; }
     .scroll-gradient{
       background: linear-gradient(
@@ -32,7 +30,7 @@
         hsl(var(--hue) 20% 12%),
         hsl(calc(var(--hue) + 30) 20% 6%)
       );
-      transition: background .1s linear; /* smooth on mobile */
+      transition: background .1s linear;
     }
 
     /* Reveal-on-scroll */
@@ -40,32 +38,81 @@
       transition: opacity .6s ease, transform .6s ease; }
     .reveal-in{ opacity:1; transform:translateY(0); }
   </style>
+
+<!-- WhatsApp Floating Button -->
+<style>
+  .wa-fab {
+    position: fixed; right: 16px; bottom: 16px; z-index: 60;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366; color: #fff; text-decoration: none;
+    border-radius: 9999px; padding: 12px 16px; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font: 600 14px/1.1 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Inter,"Helvetica Neue",Arial;
+    transition: transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+  }
+  .wa-fab:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.45); }
+  .wa-icon { width: 22px; height: 22px; display:block; }
+  /* Pulse */
+  .wa-fab::after {
+    content:""; position:absolute; inset:0; border-radius:9999px; pointer-events:none;
+    box-shadow: 0 0 0 0 rgba(37,211,102,.6); animation: wa-pulse 2.2s infinite;
+  }
+  @keyframes wa-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,.55); }
+    70%{ box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+  /* Compact on small screens */
+  @media (max-width: 420px) {
+    .wa-fab { padding: 12px; gap: 0 }
+    .wa-label { display: none }
+  }
+</style>
+
+<a
+  class="wa-fab"
+  href="https://wa.me/94769673932?text=Hey%20Bilal%2C%20I%27d%20love%20to%20chat%20about%20marketing%2Fautomation%20or%20web%20development."
+  target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"
+>
+  <!-- WhatsApp SVG icon (inline, no external asset needed) -->
+  <svg class="wa-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+    <path fill="#E9F9EE" d="M6.1 27.9 7.6 23a11.8 11.8 0 1 1 4.9 4.8l-4.9.1Z"/>
+    <path fill="#25D366" d="M6.2 28a.6.6 0 0 1-.6-.7l1.4-4.6A12.4 12.4 0 1 1 28 15.6 12.4 12.4 0 0 1 12.5 27.4l-6.3 1a.6.6 0 0 1 0 0Zm6.3-2a11.2 11.2 0 1 0-4.2-3.1.6.6 0 0 1 .1.5l-1 3.2 3.3-.5a.6.6 0 0 1 .5.1c.4.3.8.5 1.3.7Z"/>
+    <path fill="#25D366" d="M22.8 18.6c-.2 1.2-1.1 2.1-2.2 2.4-1 .3-2.3.2-3.9-.5-3.4-1.5-5.6-4.9-5.9-5.3-.3-.4-1.4-1.9-1.4-3.5 0-1.6.9-2.6 1.3-2.9.4-.4 1-.5 1.7-.5h.5c.5 0 .8.1 1 .8.4 1 .9 2.3 1 2.5.1.2.2.5 0 .8l-.5.8-.2.3c-.1.2-.3.4 0 .8.3.4 1.3 2 3.1 3.2 1.8 1.1 2.2 1 2.6.7l.6-.6c.3-.3.5-.3.8-.2l2.3 1c.6.2.9.4 1 .6 0 .1 0 .8-.1 1.1Z"/>
+  </svg>
+  <span class="wa-label">Text me directly</span>
+</a>
+
+
 </head>
 
 <body class="scroll-gradient bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans">
   <!-- Scroll progress line -->
   <div class="progress-bar" id="progress"></div>
 
+  <!-- Navigation -->
+  <header class="absolute top-0 left-0 w-full flex justify-end px-8 py-6 z-20">
+    <nav class="flex gap-8 text-sm font-medium">
+      <a href="blogs.html" class="text-gray-300 hover:text-white transition">Blogs</a>
+      <a href="projects.html" class="text-gray-300 hover:text-white transition">Projects</a>
+    </nav>
+  </header>
+
   <!-- Hero Section -->
   <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
-    <!-- Decorative images behind the hero text -->
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
-      <!-- Automation / workflow -->
       <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80"
            alt="Inbound marketing strategy"
            class="absolute top-0 left-0 w-[80vw] md:w-[60vw] h-[90vh] md:h-[80vh] object-cover rotate-[-6deg] opacity-25 md:opacity-30 blur-md rounded-2xl border border-white/10">
-      <!-- Business development -->
       <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
            alt="Business development handshake"
            class="absolute top-[10vh] right-0 w-[70vw] md:w-[60vw] h-[80vh] object-cover rotate-3 opacity-25 md:opacity-30 blur-md rounded-2xl border border-white/10">
-      <!-- Tech / coding -->
       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
            alt="Tech coding screen"
            class="absolute bottom-[-10vh] left-[20vw] w-[80vw] md:w-[60vw] h-[80vh] object-cover -rotate-2 opacity-25 md:opacity-30 blur-md rounded-2xl border border-white/10">
     </div>
 
     <h1 class="text-4xl md:text-6xl font-bold tracking-tight">Bilal Maisoor</h1>
-    <p class="mt-4 text-lg md:text-xl text-gray-300">Business Automater | marketer | Tech enthusiast</p>
+    <p class="mt-4 text-lg md:text-xl text-gray-300">Business Automater | Marketer | Tech Enthusiast</p>
     <a href="#booking" class="mt-8 px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl shadow-lg transition">Book a Consultation</a>
   </section>
 
@@ -80,7 +127,7 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services -->
   <section class="py-16 px-6 md:px-16 bg-gray-800 reveal" id="services">
     <h2 class="text-3xl font-semibold text-center mb-12">What I Do</h2>
     <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -99,20 +146,14 @@
     </div>
   </section>
 
-  <!-- IG Reels Carousel -->
+  <!-- IG Reels -->
   <section class="py-16 px-6 md:px-16 reveal" id="reels">
     <h2 class="text-3xl font-semibold text-center mb-12">My IG Reels</h2>
     <div class="swiper max-w-4xl mx-auto">
       <div class="swiper-wrapper">
-        <div class="swiper-slide flex justify-center">
-          <iframe src="https://www.instagram.com/reel/xyz/embed" class="w-[300px] h-[540px] rounded-xl" loading="lazy"></iframe>
-        </div>
-        <div class="swiper-slide flex justify-center">
-          <iframe src="https://www.instagram.com/reel/abc/embed" class="w-[300px] h-[540px] rounded-xl" loading="lazy"></iframe>
-        </div>
-        <div class="swiper-slide flex justify-center">
-          <iframe src="https://www.instagram.com/reel/123/embed" class="w-[300px] h-[540px] rounded-xl" loading="lazy"></iframe>
-        </div>
+        <div class="swiper-slide flex justify-center"><iframe src="https://www.instagram.com/reel/xyz/embed" class="w-[300px] h-[540px] rounded-xl" loading="lazy"></iframe></div>
+        <div class="swiper-slide flex justify-center"><iframe src="https://www.instagram.com/reel/abc/embed" class="w-[300px] h-[540px] rounded-xl" loading="lazy"></iframe></div>
+        <div class="swiper-slide flex justify-center"><iframe src="https://www.instagram.com/reel/123/embed" class="w-[300px] h-[540px] rounded-xl" loading="lazy"></iframe></div>
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
@@ -120,95 +161,56 @@
     </div>
   </section>
 
-  <!-- Blog Section -->
+  <!-- Blog Section (homepage preview) -->
   <section class="py-16 px-6 md:px-16 bg-gray-800 reveal" id="blog">
     <h2 class="text-3xl font-semibold text-center mb-12">Latest Articles</h2>
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-105 transition">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="text-2xl">🚀</span>
-          <h3 class="text-xl font-bold">The Ultimate Guide to Inbound Marketing</h3>
-        </div>
+        <div class="flex items-center gap-2 mb-3"><span class="text-2xl">🚀</span><h3 class="text-xl font-bold">The Ultimate Guide to Inbound Marketing</h3></div>
         <p class="text-gray-400 mb-4">Inbound attracts strangers with value-first content, converting visitors into leads and nurturing them—no pushy ads required.</p>
         <a href="ultimate-guide-to-inbound-marketing.html" class="text-purple-400 hover:underline">Read More →</a>
       </div>
       <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-105 transition">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="text-2xl">📝</span>
-          <h3 class="text-xl font-bold">How to Write and Optimize a Blog for Results</h3>
-        </div>
+        <div class="flex items-center gap-2 mb-3"><span class="text-2xl">📝</span><h3 class="text-xl font-bold">How to Write and Optimize a Blog for Results</h3></div>
         <p class="text-gray-400 mb-4">A practical workflow for topics, drafting, and SEO + CTAs that turn traffic into pipeline.</p>
         <a href="write-and-optimize-a-blog-for-results.html" class="text-purple-400 hover:underline">Read More →</a>
       </div>
       <div class="p-6 bg-gray-900 rounded-2xl shadow-lg hover:scale-105 transition">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="text-2xl">📈</span>
-          <h3 class="text-xl font-bold">Blog Structure That Converts</h3>
-        </div>
+        <div class="flex items-center gap-2 mb-3"><span class="text-2xl">📈</span><h3 class="text-xl font-bold">Blog Structure That Converts</h3></div>
         <p class="text-gray-400 mb-4">Hook → value → proof → CTA. Use this layout to guide readers from curiosity to action.</p>
         <a href="blog-structure-that-converts.html" class="text-purple-400 hover:underline">Read More →</a>
       </div>
     </div>
   </section>
 
-  <!-- Service Offer Section -->
-  <section class="py-16 px-6 md:px-16 bg-gray-900 reveal" id="services-offer">
-    <h2 class="text-3xl font-semibold text-center mb-12">How I Can Help You</h2>
-    <div class="max-w-4xl mx-auto p-8 bg-gray-800 bg-opacity-70 rounded-2xl shadow-xl">
-      <p class="text-gray-300 mb-4 text-center">I take a comprehensive look at your business and craft solutions that align with your goals:</p>
-      <ul class="list-disc list-inside text-gray-400 space-y-2">
-        <li><strong>Marketing consultation:</strong> refine messaging, funnels, and positioning to attract and convert.</li>
-        <li><strong>Competitive market research &amp; competitor analysis:</strong> see who’s winning and how to outrun them.</li>
-        <li><strong>Brand strategy:</strong> a practical roadmap for brand, content, and distribution.</li>
-        <li><strong>Business automations:</strong> automate manual processes to increase outreach and distribution.</li>
-        <li><strong>Web development &amp; creative direction:</strong> modern, mobile-first builds with creative guidance.</li>
-      </ul>
-      <p class="text-gray-300 mt-4">Whether you need growth strategy, automation, a sleek site, or creative direction—I'm here to help.</p>
-      <div class="mt-6 text-center">
-        <a href="#booking" class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl shadow-lg transition">Let’s Collaborate</a>
+  <!-- Trusted By -->
+  <section class="py-16 px-6 md:px-16 bg-gray-800 reveal" id="trusted-by">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center justify-between gap-4 mb-8">
+        <h2 class="text-3xl font-semibold">Trusted by</h2>
+        <a href="certifications.html"
+           class="group inline-flex items-center gap-2 text-fuchsia-300 hover:text-fuchsia-200 text-sm">
+          Show certifications
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M13.172 12 7.05 5.879l1.414-1.415L16 12l-7.536 7.536-1.414-1.415z"/></svg>
+        </a>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+        <img src="./assets/metalogo.svg" alt="Meta certification" class="h-10 md:h-12 opacity-90 hover:opacity-100 filter grayscale hover:grayscale-0"/>
+        <img src="./assets/ibmlogo.svg" alt="IBM certification" class="h-10 md:h-12 opacity-90 hover:opacity-100 filter grayscale hover:grayscale-0"/>
+        <img src="./assets/googlelogo.svg" alt="Google certification" class="h-10 md:h-12 opacity-90 hover:opacity-100 filter grayscale hover:grayscale-0"/>
+        <img src="./assets/hubspotlogo.svg" alt="HubSpot certification" class="h-10 md:h-12 opacity-90 hover:opacity-100 filter grayscale hover:grayscale-0"/>
+        <img src="./assets/linkedinlogo.svg" alt="LinkedIn certification" class="h-10 md:h-12 opacity-90 hover:opacity-100 filter grayscale hover:grayscale-0"/>
+        <img src="./assets/oraclelogo.svg" alt="Oracle certification" class="h-10 md:h-12 opacity-90 hover:opacity-100 filter grayscale hover:grayscale-0"/>
       </div>
     </div>
   </section>
 
-  
- <section class="py-16 px-6 md:px-16 bg-gray-800 reveal" id="trusted-by">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex items-center justify-between gap-4 mb-8">
-      <h2 class="text-3xl font-semibold">Trusted by</h2>
-      <a href="certifications.html"
-         class="group inline-flex items-center gap-2 text-fuchsia-300 hover:text-fuchsia-200 text-sm">
-        Show certifications
-        <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M13.172 12 7.05 5.879l1.414-1.415L16 12l-7.536 7.536-1.414-1.415z"/>
-        </svg>
-      </a>
-    </div>
-
-    <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-      <img src="./assets/metalogo.svg"     alt="Meta certification"     class="h-10 md:h-12 opacity-90 hover:opacity-100 transition filter grayscale hover:grayscale-0"
-           onerror="this.style.display='none'" loading="lazy">
-      <img src="./assets/ibmlogo.svg"      alt="IBM certification"      class="h-10 md:h-12 opacity-90 hover:opacity-100 transition filter grayscale hover:grayscale-0"
-           onerror="this.style.display='none'" loading="lazy">
-      <img src="./assets/googlelogo.svg"   alt="Google certification"   class="h-10 md:h-12 opacity-90 hover:opacity-100 transition filter grayscale hover:grayscale-0"
-           onerror="this.style.display='none'" loading="lazy">
-      <img src="./assets/hubspotlogo.svg"  alt="HubSpot certification"  class="h-10 md:h-12 opacity-90 hover:opacity-100 transition filter grayscale hover:grayscale-0"
-           onerror="this.style.display='none'" loading="lazy">
-      <img src="./assets/linkedinlogo.svg" alt="LinkedIn certification" class="h-10 md:h-12 opacity-90 hover:opacity-100 transition filter grayscale hover:grayscale-0"
-           onerror="this.style.display='none'" loading="lazy">
-      <img src="./assets/oraclelogo.svg"   alt="Oracle certification"   class="h-10 md:h-12 opacity-90 hover:opacity-100 transition filter grayscale hover:grayscale-0"
-           onerror="this.style.display='none'" loading="lazy">
-    </div>
-  </div>
-</section>
-
-
-  <!-- Booking Section -->
+  <!-- Booking -->
   <section class="py-16 px-6 md:px-16 reveal" id="booking">
     <h2 class="text-3xl font-semibold text-center mb-8">Book a Consultation</h2>
     <p class="text-center text-gray-300 mb-6">Pick a time that works for you below.</p>
     <div class="max-w-3xl mx-auto">
-      <iframe src="https://calendly.com/bilalmaisoor24/30min?embed_domain=localhost&embed_type=Inline"
-              class="w-full h-[630px] rounded-2xl border-0 shadow-lg"></iframe>
+      <iframe src="https://calendly.com/bilalmaisoor24/30min?embed_domain=localhost&embed_type=Inline" class="w-full h-[630px] rounded-2xl border-0 shadow-lg"></iframe>
     </div>
   </section>
 
@@ -224,7 +226,6 @@
 
   <!-- Scripts -->
   <script>
-    // Swiper init
     const swiper = new Swiper('.swiper', {
       loop: true,
       pagination: { el: '.swiper-pagination', clickable: true },
@@ -233,20 +234,18 @@
       spaceBetween: 20,
     });
 
-    // Scroll progress + hue shift
     const progress = document.getElementById('progress');
     const onScroll = () => {
       const doc = document.documentElement;
       const h = doc.scrollHeight - doc.clientHeight;
       const p = h > 0 ? (doc.scrollTop / h) * 100 : 0;
       progress.style.width = p + '%';
-      const hue = 255 + (p * 0.6); // tweak intensity here
+      const hue = 255 + (p * 0.6);
       document.documentElement.style.setProperty('--hue', hue.toFixed(1));
     };
     document.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // Reveal-on-scroll
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
