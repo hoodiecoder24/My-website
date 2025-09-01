@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Certifications – Bilal Maisoor</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+
+  <header class="py-4 px-6 flex justify-between items-center border-b border-white/10 backdrop-blur">
+    <a href="index.html" class="text-xl font-semibold tracking-tight">
+      Bilal <span class="text-fuchsia-400">Maisoor</span>
+    </a>
+    <a href="index.html" class="text-sm text-white/70 hover:text-white">← Back</a>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-10">
+    <h1 class="text-3xl font-bold mb-2">Certifications</h1>
+    <p class="text-white/70 mb-8">A selection of verified certifications and program completions.</p>
+
+    <!-- TIP: put your JPGs/PNGs in /certs and update the filenames below -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Example items — replace src with your real files -->
+      <figure class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow">
+        <img src="certs/meta-cert.jpg" alt="Meta Certification" class="w-full h-64 object-cover" loading="lazy">
+        <figcaption class="px-4 py-3 text-sm text-white/80">Meta – Digital Marketing Associate</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow">
+        <img src="certs/ibm-cert.jpg" alt="IBM Certification" class="w-full h-64 object-cover" loading="lazy">
+        <figcaption class="px-4 py-3 text-sm text-white/80">IBM – Data & AI Fundamentals</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow">
+        <img src="certs/google-cert.jpg" alt="Google Certification" class="w-full h-64 object-cover" loading="lazy">
+        <figcaption class="px-4 py-3 text-sm text-white/80">Google – Analytics / Ads</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow">
+        <img src="certs/hubspot-cert.jpg" alt="HubSpot Certification" class="w-full h-64 object-cover" loading="lazy">
+        <figcaption class="px-4 py-3 text-sm text-white/80">HubSpot – Inbound / Content</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow">
+        <img src="certs/linkedin-cert.jpg" alt="LinkedIn Certification" class="w-full h-64 object-cover" loading="lazy">
+        <figcaption class="px-4 py-3 text-sm text-white/80">LinkedIn – Marketing / Strategy</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow">
+        <img src="certs/oracle-cert.jpg" alt="Oracle Certification" class="w-full h-64 object-cover" loading="lazy">
+        <figcaption class="px-4 py-3 text-sm text-white/80">Oracle – Cloud / Data</figcaption>
+      </figure>
+    </section>
+
+    <!-- Optional: simple lightbox (no libs) -->
+    <dialog id="lb" class="backdrop:bg-black/80 p-0 rounded-xl overflow-hidden">
+      <img id="lbImg" src="" alt="" class="max-h-[85vh] max-w-[90vw] object-contain">
+    </dialog>
+  </main>
+
+  <script>
+    // Simple lightbox: click any cert image to open bigger
+    const dlg = document.getElementById('lb');
+    const img = document.getElementById('lbImg');
+    document.querySelectorAll('figure img').forEach(el => {
+      el.addEventListener('click', () => {
+        img.src = el.src;
+        img.alt = el.alt;
+        dlg.showModal();
+      });
+    });
+    dlg?.addEventListener('click', (e) => {
+      const rect = dlg.getBoundingClientRect();
+      const inDialog = (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom);
+      if (!inDialog) dlg.close();
+    });
+  </script>
+</body>
+</html>
